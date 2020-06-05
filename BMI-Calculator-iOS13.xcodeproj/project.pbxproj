@@ -18,7 +18,7 @@
 
 /* Begin PBXFileReference section */
 		6134C8FA2489987800951B5E /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		61814905248974010057115B /* BMI-Calculator-iOS13.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator-iOS13.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		61814905248974010057115B /* BMI Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61814908248974010057115B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6181490A248974010057115B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6181490C248974010057115B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,7 +50,7 @@
 		61814906248974010057115B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				61814905248974010057115B /* BMI-Calculator-iOS13.app */,
+				61814905248974010057115B /* BMI Calculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,7 +111,7 @@
 			);
 			name = "BMI-Calculator-iOS13";
 			productName = "BMI-Calculator-iOS13";
-			productReference = 61814905248974010057115B /* BMI-Calculator-iOS13.app */;
+			productReference = 61814905248974010057115B /* BMI Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -320,7 +320,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ansari.nadeem.BMI-Calculator-iOS13";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "BMI Calculator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ansari.nadeem.BMI-Calculator-iOS13";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "BMI Calculator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -10,12 +10,12 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculate_background" translatesAutoresizingMaskIntoConstraints="NO" id="pnf-CW-gpr" userLabel="Background">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calculate_background" translatesAutoresizingMaskIntoConstraints="NO" id="pnf-CW-gpr" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lOz-Gl-88h" userLabel="Parent-Stack">
@@ -50,26 +50,40 @@
                                                         <rect key="frame" x="20" y="0.0" width="374" height="136.5"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1gQ-G1-OF1" userLabel="Height-Label-Stack">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="78.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="waG-g9-pB1" userLabel="Height-Label">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="55.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="78.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.5m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8I-xD-gT6" userLabel="Height-Slider-Value">
-                                                                        <rect key="frame" x="338" y="0.0" width="36" height="55.5"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f0u-h1-1vf">
+                                                                        <rect key="frame" x="311.5" y="0.0" width="62.5" height="78.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.50 m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8I-xD-gT6" userLabel="Height-Slider-Meters">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="62.5" height="39.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="59.05 in" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8S-eH-Yh2" userLabel="Height-Slider-Inches">
+                                                                                <rect key="frame" x="0.0" y="39.5" width="62.5" height="39"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="DAU-Ie-Ta9" userLabel="Height-Slider">
-                                                                <rect key="frame" x="-2" y="55.5" width="378" height="82"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1.5" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="DAU-Ie-Ta9" userLabel="Height-Slider">
+                                                                <rect key="frame" x="-2" y="78.5" width="378" height="59"/>
                                                                 <color key="minimumTrackTintColor" red="0.57072007660000001" green="0.56292283539999999" blue="0.78041750190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="thumbTintColor" red="0.57463884350000005" green="0.56279647349999995" blue="0.7843394279" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <connections>
+                                                                    <action selector="heightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="h4k-Kc-9OX"/>
+                                                                </connections>
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
@@ -89,26 +103,40 @@
                                                         <rect key="frame" x="20" y="0.0" width="374" height="136"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="4b3-i4-Yxc" userLabel="Weight-Label-Stack">
-                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="55"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="374" height="78.5"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxc-6E-Jmg" userLabel="Weight-Label">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="55"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="54" height="78.5"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
+                                                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="175lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-hP-aFP" userLabel="Weight-Slider-Value">
-                                                                        <rect key="frame" x="324.5" y="0.0" width="49.5" height="55"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                        <nil key="textColor"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
+                                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uqt-KX-1Gf">
+                                                                        <rect key="frame" x="305.5" y="0.0" width="68.5" height="78.5"/>
+                                                                        <subviews>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150.0 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-hP-aFP" userLabel="Weight-Slider-Pounds">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="39"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="68.0 Kgs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyO-tg-CPg" userLabel="Weight-Slider-Kgs">
+                                                                                <rect key="frame" x="0.0" y="39" width="68.5" height="39.5"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                        </subviews>
+                                                                    </stackView>
                                                                 </subviews>
                                                             </stackView>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="175" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-I5-WOb" userLabel="Weight-Slider">
-                                                                <rect key="frame" x="-2" y="55" width="378" height="82"/>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="150" minValue="0.0" maxValue="300" translatesAutoresizingMaskIntoConstraints="NO" id="Yf2-I5-WOb" userLabel="Weight-Slider">
+                                                                <rect key="frame" x="-2" y="78.5" width="378" height="58.5"/>
                                                                 <color key="minimumTrackTintColor" red="0.57072007660000001" green="0.56292283539999999" blue="0.78041750190000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <color key="thumbTintColor" red="0.57463884350000005" green="0.56279647349999995" blue="0.7843394279" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <connections>
+                                                                    <action selector="weightChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="F8O-E1-RLV"/>
+                                                                </connections>
                                                             </slider>
                                                         </subviews>
                                                     </stackView>
@@ -125,15 +153,19 @@
                                                 <rect key="frame" x="0.0" y="272.5" width="414" height="136.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXS-wu-D5C">
-                                                        <rect key="frame" x="20" y="48.5" width="374" height="40"/>
+                                                        <rect key="frame" x="20" y="43.5" width="374" height="50"/>
                                                         <color key="backgroundColor" red="0.57463884350000005" green="0.56279647349999995" blue="0.7843394279" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="asQ-wa-ICA"/>
+                                                            <constraint firstAttribute="height" constant="50" id="asQ-wa-ICA"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <state key="normal" title="CALCULATE">
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrf-rb-gUO"/>
+                                                            <segue destination="v7K-0S-WeV" kind="presentation" id="YNN-Es-aGO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,6 +196,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="calcButton" destination="xXS-wu-D5C" id="xjn-1M-GCW"/>
+                        <outlet property="heightLabelInches" destination="R8S-eH-Yh2" id="ZOj-pk-dfC"/>
+                        <outlet property="heightLabelMeters" destination="p8I-xD-gT6" id="8Rq-eD-tSw"/>
+                        <outlet property="heightSlider" destination="DAU-Ie-Ta9" id="MYT-tO-DlA"/>
+                        <outlet property="weightLabelKilos" destination="AyO-tg-CPg" id="PvP-la-rtf"/>
+                        <outlet property="weightLabelPounds" destination="DCq-hP-aFP" id="bip-g5-cfa"/>
+                        <outlet property="weightSlider" destination="Yf2-I5-WOb" id="oMC-mL-ji4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,17 +213,17 @@
         <!--Result View Controller-->
         <scene sceneID="Jeq-ds-cCT">
             <objects>
-                <viewController id="v7K-0S-WeV" customClass="ResultViewController" customModule="BMI_Calculator_iOS13" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="v7K-0S-WeV" customClass="ResultViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vcY-if-Ec8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="29y-Y5-8WU" userLabel="Background">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                                 <color key="backgroundColor" red="0.1782904565" green="0.63110369440000003" blue="0.79610270260000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eik-o6-UBa" userLabel="Parent-Stack">
-                                <rect key="frame" x="78.5" y="371.5" width="257.5" height="153.5"/>
+                                <rect key="frame" x="78.5" y="344.5" width="257.5" height="153.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-pn-7pV" userLabel="Result-Heading">
                                         <rect key="frame" x="17" y="0.0" width="223" height="42"/>
@@ -190,7 +231,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-ow-QQg" userLabel="Result-Val-Label">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-ow-QQg" userLabel="Result-BMI-Label">
                                         <rect key="frame" x="67" y="52" width="123" height="60"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

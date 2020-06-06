@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="BMI_Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -164,7 +164,6 @@
                                                         </state>
                                                         <connections>
                                                             <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrf-rb-gUO"/>
-                                                            <segue destination="v7K-0S-WeV" kind="presentation" id="YNN-Es-aGO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -204,6 +203,7 @@
                         <outlet property="weightLabelKilos" destination="AyO-tg-CPg" id="PvP-la-rtf"/>
                         <outlet property="weightLabelPounds" destination="DCq-hP-aFP" id="bip-g5-cfa"/>
                         <outlet property="weightSlider" destination="Yf2-I5-WOb" id="oMC-mL-ji4"/>
+                        <segue destination="v7K-0S-WeV" kind="presentation" identifier="goToResult" id="Wut-12-jN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -225,38 +225,63 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eik-o6-UBa" userLabel="Parent-Stack">
                                 <rect key="frame" x="78.5" y="344.5" width="257.5" height="153.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-pn-7pV" userLabel="Result-Heading">
-                                        <rect key="frame" x="17" y="0.0" width="223" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-ow-QQg" userLabel="Result-BMI-Label">
-                                        <rect key="frame" x="67" y="52" width="123" height="60"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat some more snacks!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ll-jq-2wh" userLabel="Result-Suggestion-Label">
-                                        <rect key="frame" x="0.0" y="122" width="257.5" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PlP-3P-r49">
+                                        <rect key="frame" x="0.0" y="0.0" width="257.5" height="153.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-pn-7pV" userLabel="Result-Heading">
+                                                <rect key="frame" x="17" y="0.0" width="223" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-ow-QQg" userLabel="Result-BMI-Label">
+                                                <rect key="frame" x="67" y="52" width="123" height="60"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat some more snacks!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ll-jq-2wh" userLabel="Result-Suggestion-Label">
+                                                <rect key="frame" x="0.0" y="122" width="257.5" height="31.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4n-uG-UxC" userLabel="Recalculate">
+                                <rect key="frame" x="20" y="718" width="374" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cNs-Fh-8Md"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="RECALCULATE">
+                                    <color key="titleColor" red="0.63762080669999999" green="0.6248944998" blue="0.87061673399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="TEl-Vt-DBq" firstAttribute="bottom" secondItem="Q4n-uG-UxC" secondAttribute="bottom" constant="40" id="1Af-bA-IL7"/>
                             <constraint firstItem="29y-Y5-8WU" firstAttribute="top" secondItem="vcY-if-Ec8" secondAttribute="top" id="5Tp-be-jB1"/>
+                            <constraint firstItem="Q4n-uG-UxC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="TEl-Vt-DBq" secondAttribute="leading" constant="20" id="9Dp-QS-wvw"/>
+                            <constraint firstItem="Q4n-uG-UxC" firstAttribute="centerX" secondItem="vcY-if-Ec8" secondAttribute="centerX" id="DuI-Nz-H3c"/>
                             <constraint firstItem="29y-Y5-8WU" firstAttribute="trailing" secondItem="vcY-if-Ec8" secondAttribute="trailing" id="JHQ-f8-uOU"/>
                             <constraint firstItem="29y-Y5-8WU" firstAttribute="leading" secondItem="vcY-if-Ec8" secondAttribute="leading" id="Lt2-z3-NT2"/>
                             <constraint firstAttribute="bottom" secondItem="29y-Y5-8WU" secondAttribute="bottom" id="NIF-mf-EkW"/>
                             <constraint firstItem="eik-o6-UBa" firstAttribute="centerY" secondItem="vcY-if-Ec8" secondAttribute="centerY" id="ObA-fU-fWH"/>
+                            <constraint firstItem="Q4n-uG-UxC" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="TEl-Vt-DBq" secondAttribute="trailing" constant="-20" id="sU5-jh-EYu"/>
                             <constraint firstItem="eik-o6-UBa" firstAttribute="centerX" secondItem="vcY-if-Ec8" secondAttribute="centerX" id="tV5-1S-plF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TEl-Vt-DBq"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Hfu-bo-v0b"/>
+                    <connections>
+                        <outlet property="bmiLabel" destination="VEk-ow-QQg" id="6zR-ZD-Qwd"/>
+                        <outlet property="suggestionLabel" destination="6ll-jq-2wh" id="OPA-Fw-Np8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzY-l5-C6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  BMI-Calculator-iOS13
 //
 //  Created by Nadeem Ansari on 6/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
     @IBOutlet weak var heightLabelMeters: UILabel!
     @IBOutlet weak var heightLabelInches: UILabel!
     @IBOutlet weak var weightLabelPounds: UILabel!
@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     let toInches = Float(39.3701)
     let toKilos = Float(0.45)
     let bmiConst = Float(703)
+    var bmi: Float? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,15 @@ class ViewController: UIViewController {
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         let weightPounds = weightSlider.value
         let heightInches = heightSlider.value * toInches
-        let bmi = (bmiConst * weightPounds)/(powf(heightInches, 2))
-        print("BMI: \(String(format: "%.2f", bmi))")
+        bmi = (bmiConst * weightPounds)/(powf(heightInches, 2))
+        
+        self.performSegue(withIdentifier: "goToResult", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToResult" {
+            guard let destinationVC = segue.destination as? ResultViewController else { return }
+            destinationVC.bmiValue = bmi
+        }
     }
 }

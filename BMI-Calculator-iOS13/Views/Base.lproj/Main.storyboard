@@ -220,34 +220,29 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="result_background" translatesAutoresizingMaskIntoConstraints="NO" id="29y-Y5-8WU" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                                <color key="backgroundColor" red="0.1782904565" green="0.63110369440000003" blue="0.79610270260000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eik-o6-UBa" userLabel="Parent-Stack">
-                                <rect key="frame" x="78.5" y="344.5" width="257.5" height="153.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="eik-o6-UBa" userLabel="Parent-Stack">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="718"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PlP-3P-r49">
-                                        <rect key="frame" x="0.0" y="0.0" width="257.5" height="153.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-pn-7pV" userLabel="Result-Heading">
-                                                <rect key="frame" x="17" y="0.0" width="223" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-ow-QQg" userLabel="Result-BMI-Label">
-                                                <rect key="frame" x="67" y="52" width="123" height="60"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat some more snacks!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ll-jq-2wh" userLabel="Result-Suggestion-Label">
-                                                <rect key="frame" x="0.0" y="122" width="257.5" height="31.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR RESULT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjP-pn-7pV" userLabel="Result-Heading">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="232.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEk-ow-QQg" userLabel="Result-BMI-Label">
+                                        <rect key="frame" x="0.0" y="242.5" width="414" height="233"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eat some more snacks! Eat some more snacks!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="6ll-jq-2wh" userLabel="Result-Suggestion-Label">
+                                        <rect key="frame" x="0.0" y="485.5" width="414" height="232.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4n-uG-UxC" userLabel="Recalculate">
@@ -265,7 +260,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TEl-Vt-DBq" firstAttribute="bottom" secondItem="Q4n-uG-UxC" secondAttribute="bottom" constant="40" id="1Af-bA-IL7"/>
                             <constraint firstItem="29y-Y5-8WU" firstAttribute="top" secondItem="vcY-if-Ec8" secondAttribute="top" id="5Tp-be-jB1"/>
@@ -274,17 +269,19 @@
                             <constraint firstItem="29y-Y5-8WU" firstAttribute="trailing" secondItem="vcY-if-Ec8" secondAttribute="trailing" id="JHQ-f8-uOU"/>
                             <constraint firstItem="29y-Y5-8WU" firstAttribute="leading" secondItem="vcY-if-Ec8" secondAttribute="leading" id="Lt2-z3-NT2"/>
                             <constraint firstAttribute="bottom" secondItem="29y-Y5-8WU" secondAttribute="bottom" id="NIF-mf-EkW"/>
-                            <constraint firstItem="eik-o6-UBa" firstAttribute="centerY" secondItem="vcY-if-Ec8" secondAttribute="centerY" id="ObA-fU-fWH"/>
+                            <constraint firstAttribute="trailing" secondItem="eik-o6-UBa" secondAttribute="trailing" id="fIQ-Lm-rm6"/>
+                            <constraint firstItem="Q4n-uG-UxC" firstAttribute="top" secondItem="eik-o6-UBa" secondAttribute="bottom" id="o2j-nj-yp4"/>
+                            <constraint firstItem="eik-o6-UBa" firstAttribute="top" secondItem="TEl-Vt-DBq" secondAttribute="top" id="q4K-Nc-FBI"/>
                             <constraint firstItem="Q4n-uG-UxC" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="TEl-Vt-DBq" secondAttribute="trailing" constant="-20" id="sU5-jh-EYu"/>
-                            <constraint firstItem="eik-o6-UBa" firstAttribute="centerX" secondItem="vcY-if-Ec8" secondAttribute="centerX" id="tV5-1S-plF"/>
+                            <constraint firstItem="eik-o6-UBa" firstAttribute="leading" secondItem="vcY-if-Ec8" secondAttribute="leading" id="x9X-jo-Hj5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TEl-Vt-DBq"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hfu-bo-v0b"/>
                     <connections>
+                        <outlet property="adviceLabel" destination="6ll-jq-2wh" id="OPA-Fw-Np8"/>
                         <outlet property="bmiLabel" destination="VEk-ow-QQg" id="6zR-ZD-Qwd"/>
                         <outlet property="recalculateBtn" destination="Q4n-uG-UxC" id="Eua-Xn-E8c"/>
-                        <outlet property="suggestionLabel" destination="6ll-jq-2wh" id="OPA-Fw-Np8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VzY-l5-C6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

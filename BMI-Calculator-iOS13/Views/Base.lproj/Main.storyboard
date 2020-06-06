@@ -112,16 +112,16 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uqt-KX-1Gf">
-                                                                        <rect key="frame" x="305.5" y="0.0" width="68.5" height="78.5"/>
+                                                                        <rect key="frame" x="295" y="0.0" width="79" height="78.5"/>
                                                                         <subviews>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150.0 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-hP-aFP" userLabel="Weight-Slider-Pounds">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="39"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150.00 lbs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-hP-aFP" userLabel="Weight-Slider-Pounds">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="79" height="39"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
-                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="68.0 Kgs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyO-tg-CPg" userLabel="Weight-Slider-Kgs">
-                                                                                <rect key="frame" x="0.0" y="39" width="68.5" height="39.5"/>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="68.03 Kgs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyO-tg-CPg" userLabel="Weight-Slider-Kgs">
+                                                                                <rect key="frame" x="0.0" y="39" width="79" height="39.5"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 <nil key="highlightedColor"/>
@@ -260,6 +260,9 @@
                                 <state key="normal" title="RECALCULATE">
                                     <color key="titleColor" red="0.63762080669999999" green="0.6248944998" blue="0.87061673399999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="v7K-0S-WeV" eventType="touchUpInside" id="14p-zT-2pX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -280,6 +283,7 @@
                     <navigationItem key="navigationItem" id="Hfu-bo-v0b"/>
                     <connections>
                         <outlet property="bmiLabel" destination="VEk-ow-QQg" id="6zR-ZD-Qwd"/>
+                        <outlet property="recalculateBtn" destination="Q4n-uG-UxC" id="Eua-Xn-E8c"/>
                         <outlet property="suggestionLabel" destination="6ll-jq-2wh" id="OPA-Fw-Np8"/>
                     </connections>
                 </viewController>

@@ -17,40 +17,36 @@ class MainViewController: UIViewController {
     @IBOutlet weak var weightSlider: UISlider!
     @IBOutlet weak var calcButton: UIButton!
     
-    let toInches = Float(39.3701)
-    let toKilos = Float(0.45)
-    let bmiConst = Float(703)
     var bmi: Float? = nil
+    
+    let calculatorBrain = CalculatorBrain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         calcButton.layer.cornerRadius = 10
     }
     
     @IBAction func heightChanged(_ sender: UISlider) {
         let heightMeters = sender.value
-        let heightInches = heightMeters * toInches
+        let heightInches = calculatorBrain.convertToInches(heightMeters)
         heightLabelMeters.text = String(format: "%.2f m", heightMeters)
         heightLabelInches.text = String(format: "%.2f in", heightInches)
     }
     
     @IBAction func weightChanged(_ sender: UISlider) {
         let weightPounds = sender.value
-        let weightKilos = weightPounds * toKilos
-        weightLabelPounds.text = String(format: "%.1f lbs", weightPounds)
-        weightLabelKilos.text = String(format: "%.1f Kgs", weightKilos)
+        let weightKilos = calculatorBrain.convertToKilos(weightPounds)
+        weightLabelPounds.text = String(format: "%.2f lbs", weightPounds)
+        weightLabelKilos.text = String(format: "%.2f Kgs", weightKilos)
     }
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
-        let weightPounds = weightSlider.value
-        let heightInches = heightSlider.value * toInches
-        bmi = (bmiConst * weightPounds)/(powf(heightInches, 2))
-        
+        bmi = calculatorBrain.calcBMI(weight: weightSlider.value, height: heightSlider.value)
         self.performSegue(withIdentifier: "goToResult", sender: self)
     }
     

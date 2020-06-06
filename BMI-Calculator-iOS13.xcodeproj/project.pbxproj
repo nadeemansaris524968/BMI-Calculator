@@ -14,6 +14,7 @@
 		61814910248974010057115B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6181490E248974010057115B /* Main.storyboard */; };
 		61814912248974020057115B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61814911248974020057115B /* Assets.xcassets */; };
 		61814915248974020057115B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61814913248974020057115B /* LaunchScreen.storyboard */; };
+		61AAEED6248BF20100C8199D /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AAEED5248BF20100C8199D /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		61814911248974020057115B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61814914248974020057115B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61814916248974020057115B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61AAEED5248BF20100C8199D /* CalculatorBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		6181491E248975900057115B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				61AAEED5248BF20100C8199D /* CalculatorBrain.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				6181490D248974010057115B /* MainViewController.swift in Sources */,
 				61814909248974010057115B /* AppDelegate.swift in Sources */,
 				6181490B248974010057115B /* SceneDelegate.swift in Sources */,
+				61AAEED6248BF20100C8199D /* CalculatorBrain.swift in Sources */,
 				6134C8FB2489987800951B5E /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
